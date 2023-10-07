@@ -1,7 +1,7 @@
 nome = input("Qual o seu nome?\n")
 idade = input("Qual a sua idade?\n")
 
-if nome != '' and idade != '':
+if nome != '' and idade != '': # O professor aqui usou if nome and idade
     print("Seu nome é %s" % nome)
     print("Seu nome invertido é %s" % nome[::-1])
     if ' ' in nome:
