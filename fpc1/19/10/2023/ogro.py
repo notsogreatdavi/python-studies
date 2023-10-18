@@ -4,7 +4,9 @@ while True:
         break
 
 if numero <= 5:
-    print("I" * numero, " ", "*");
+    print("I" * numero)
+    print("*")
 
 if numero > 5:
-    print("I" * 5, " ", "I" * (numero - 5))
+    print("I" * 5)
+    print("I" * (numero - 5))
