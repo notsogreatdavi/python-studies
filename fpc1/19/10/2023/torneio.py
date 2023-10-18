@@ -10,7 +10,9 @@ for i in range(len(resultados)):
 
 if vitorias_cont == 5 or vitorias_cont == 6:
     print(1)
-if vitorias_cont == 3 or vitorias_cont == 4:
+elif vitorias_cont == 3 or vitorias_cont == 4:
     print(2)
-if vitorias_cont == 1 or vitorias_cont == 2:
+elif vitorias_cont == 1 or vitorias_cont == 2:
     print(3)
+else:
+    print(-1)
