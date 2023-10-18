@@ -3,7 +3,8 @@ while True:
     if (numero > 0) or (numero < 10):
         break
 
-    if numero <= 5:
-        for i in range (numero):
-            print("I")
-    
+if numero <= 5:
+    print("I" * numero);
+
+if numero > 5:
+    print("")
