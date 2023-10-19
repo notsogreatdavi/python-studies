@@ -1,0 +1,1 @@
+qregistros = int(input("Qual o número de registros?"))
