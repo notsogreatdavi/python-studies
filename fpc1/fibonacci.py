@@ -1,11 +1,15 @@
-def fibonacci(n, memo={}):
-    if n <= 2:
-        return 1
-    elif n not in memo:
-        memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)
-    return memo[n]
+def fibonacci(n):
+    fib = [0] * (n+1)
+    call = [0] * (n+1)
+    fib[1] = 1
+    call[1] = 0
+    for i in range(2,n+1):
+        fib[i] = fib[i-1] + fib[i-2]
+        call[i] = call[i-1] + call[i-2] + 2
+    return call[n], fib[n]
 
-howmany = int(input())
-for i in range(howmany):
-    x = int(input())
-    print("fib(%d)  = %d" % (x, fibonacci(x)))
+how_many_fib = int(input())
+for i in range(how_many_fib):
+    n = int(input())
+    calls,result = fibonacci(n)
+    print("fib(%d) = %d calls = %d" %(n,calls,result))
