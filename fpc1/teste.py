@@ -1,6 +1,4 @@
 def fibonacci(n):
-    if n == 0:
-        return n, n
     fib = [0] * (n+1)
     call = [0] * (n+1)
     fib[1] = 1
