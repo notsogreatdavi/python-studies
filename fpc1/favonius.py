@@ -1,7 +1,7 @@
 def favonius(pessoas, salto):
    sobrevivente = 0
    for i in range(2, pessoas+1):
-       sobrevivente = (sobrevivente + salto) % 
+       sobrevivente = (sobrevivente + salto) % i
    return sobrevivente + 1
 
 casos = int(input())
