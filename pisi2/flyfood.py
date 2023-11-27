@@ -40,8 +40,8 @@ caminhos = permutacoes(str_pontos)
 
 for elem in caminhos:
     distancia_percorrida = 0
+    elem = "R" + elem + "R"
     for i in range(len(elem) - 1):
-        elem = "R" + elem + "R"
         if elem[i:i+2] in distancias:
             distancia_percorrida += distancias[elem[i:i+2]]
             caminhos_dist[elem] = distancia_percorrida
