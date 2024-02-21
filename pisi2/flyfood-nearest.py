@@ -1,7 +1,7 @@
-def calcular_distancia(letra1, letra2):
-    return abs(letra1[0] - letra2[0]) + abs(letra1[1] - letra2[1])
+def calcular_distancia(ponto1, ponto2):
+    return abs(ponto1[0] - ponto2[0]) + abs(ponto1[1] - ponto2[1])
 
-def nearest_one(posicoes_letras, ponto_inicial):
+def mais_proximo(posicoes_letras, ponto_inicial):
     pontos_restantes = list(posicoes_letras.keys())
     pontos_restantes.remove(ponto_inicial)
 
@@ -16,7 +16,7 @@ def nearest_one(posicoes_letras, ponto_inicial):
         ponto_atual = ponto_mais_proximo
         pontos_restantes.remove(ponto_mais_proximo)
 
-    # Adicionar o retorno ao ponto inicial 'R'
+    # Retornar ao ponto R 
     caminho.append(ponto_inicial)
 
     return caminho
@@ -37,8 +37,8 @@ for i, linha in enumerate(matriz):
         if elemento != "0":
             pontos[elemento] = (i, j)
 
-caminho_vizinho = nearest_one(pontos, 'R')
+caminho_proximo = mais_proximo(pontos, 'R')
 
 # Distância total do caminho encontrado
-distancia_total = sum(calcular_distancia(pontos[caminho_vizinho[i]], pontos[caminho_vizinho[i+1]]) for i in range(len(caminho_vizinho)-1))
-print(caminho_vizinho, "Distância do caminho:",distancia_total)
+distancia_total = sum(calcular_distancia(pontos[caminho_proximo[i]], pontos[caminho_proximo[i+1]]) for i in range(len(caminho_proximo)-1))
+print(caminho_proximo, "Distância do caminho:",distancia_total)
