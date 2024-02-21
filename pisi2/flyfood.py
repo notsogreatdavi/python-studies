@@ -1,4 +1,4 @@
-arq = open("pisi2/input.txt", "r")
+arq = open("input.txt", "r")
 listalinhas = arq.readlines()
 arq.close()
 linha_coluna = listalinhas[0].split()
@@ -48,4 +48,5 @@ for elem in caminhos:
 
 caminhos_dist_ord = dict(sorted(caminhos_dist.items(), key=lambda item: item[1]))
 caminhos_ord = list(caminhos_dist_ord.keys())
-print(caminhos_ord[0])
+print(caminhos_ord[0], caminhos_dist[caminhos_ord[0]])
+print(caminhos_dist)
