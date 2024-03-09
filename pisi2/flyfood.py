@@ -1,3 +1,7 @@
+import time
+
+start_time = time.time()
+
 arq = open("input.txt", "r")
 listalinhas = arq.readlines()
 arq.close()
@@ -48,5 +52,7 @@ for elem in caminhos:
 
 caminhos_dist_ord = dict(sorted(caminhos_dist.items(), key=lambda item: item[1]))
 caminhos_ord = list(caminhos_dist_ord.keys())
-print(caminhos_ord[0], caminhos_dist[caminhos_ord[0]])
-print(caminhos_dist)
+end_time = time.time()
+
+print(caminhos_ord[0], "Distância do caminho: ",caminhos_dist[caminhos_ord[0]])
+print(end_time - start_time)

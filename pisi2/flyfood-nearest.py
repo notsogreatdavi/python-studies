@@ -1,3 +1,7 @@
+import time
+
+start_time = time.time()
+
 def calcular_distancia(ponto1, ponto2):
     return abs(ponto1[0] - ponto2[0]) + abs(ponto1[1] - ponto2[1])
 
@@ -41,4 +45,7 @@ caminho_proximo = mais_proximo(pontos, 'R')
 
 # Distância total do caminho encontrado
 distancia_total = sum(calcular_distancia(pontos[caminho_proximo[i]], pontos[caminho_proximo[i+1]]) for i in range(len(caminho_proximo)-1))
+end_time = time.time()
+
 print(caminho_proximo, "Distância do caminho:",distancia_total)
+print(end_time - start_time)
